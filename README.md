@@ -2,26 +2,31 @@
   <img alt="Logo" src="https://raw.githubusercontent.com/bchiang7/v4/main/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
-  brittanychiang.com - v4
+  Personal Portfolio Website - v4
 </h1>
 <p align="center">
-  The fourth iteration of <a href="https://brittanychiang.com" target="_blank">brittanychiang.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  A modern personal portfolio website built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby 5</a>, <a href="https://reactjs.org/" target="_blank">React 18</a>, and <a href="https://styled-components.com/" target="_blank">Styled Components</a>
 </p>
 <p align="center">
-  Previous iterations:
-  <a href="https://github.com/bchiang7/v1" target="_blank">v1</a>,
-  <a href="https://github.com/bchiang7/v2" target="_blank">v2</a>,
-  <a href="https://github.com/bchiang7/bchiang7.github.io" target="_blank">v3</a>
-</p>
-<p align="center">
-  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
-  </a>
+  <strong>✨ Updated to latest technologies for Node.js v20+ compatibility</strong>
 </p>
 
 ![demo](https://raw.githubusercontent.com/bchiang7/v4/main/src/images/demo.png)
 
-## 🚨 Forking this repo (please read!)
+## � Tech Stack
+
+This portfolio leverages modern web technologies:
+
+- **Frontend Framework**: [Gatsby 5.15.0](https://www.gatsbyjs.org/) - Static site generator with React
+- **UI Library**: [React 18.2.0](https://reactjs.org/) - Component-based UI library
+- **Styling**: [Styled Components 6.1.8](https://styled-components.com/) - CSS-in-JS styling
+- **Data Layer**: [GraphQL 16.8.1](https://graphql.org/) - Query language for APIs
+- **Image Processing**: [Gatsby Plugin Image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/) - Optimized image loading
+- **Content Management**: Markdown files with frontmatter
+- **Analytics**: Google Analytics 4 via gatsby-plugin-google-gtag
+- **Node.js**: v18+ (tested with v20.19.3)
+
+## �🚨 Forking this repo (please read!)
 
 Many people have contacted me asking me if they can use this code for their own website, and the answer to that question is usually **yes, with attribution**.
 
@@ -35,53 +40,166 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [br
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
+### Prerequisites
+
+- **Node.js**: v18.0.0 or higher
+- **npm**: v8.0.0 or higher
+- **Git**: For version control
+
+### Quick Start
+
+1. **Clone the repository**
+
+   ```sh
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install the Gatsby CLI** (if you haven't already)
 
    ```sh
    npm install -g gatsby-cli
    ```
 
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+3. **Install dependencies**
 
    ```sh
-   nvm install
+   npm install
    ```
 
-3. Install dependencies
-
-   ```sh
-   yarn
-   ```
-
-4. Start the development server
+4. **Start the development server**
 
    ```sh
    npm start
    ```
 
+5. **Open your browser** and visit `http://localhost:8000`
+
+### Alternative: Using Yarn
+
+```sh
+yarn install
+yarn start
+```
+
+## 📜 Available Scripts
+
+| Command          | Description                          |
+| ---------------- | ------------------------------------ |
+| `npm start`      | Start the development server         |
+| `npm run build`  | Build the site for production        |
+| `npm run serve`  | Preview the production build locally |
+| `npm run clean`  | Clear Gatsby cache and public folder |
+| `npm run format` | Format code with Prettier            |
+
 ## 🚀 Building and Running for Production
 
-1. Generate a full static production build
+1. **Generate a full static production build**
 
    ```sh
    npm run build
    ```
 
-1. Preview the site as it will appear once deployed
+2. **Preview the site as it will appear once deployed**
 
    ```sh
    npm run serve
    ```
 
-## 🎨 Color Reference
+3. **Deploy to Netlify**
+   - Connect your GitHub repository to Netlify
+   - Set build command: `npm run build`
+   - Set publish directory: `public`
 
-| Color          | Hex                                                                |
-| -------------- | ------------------------------------------------------------------ |
-| Navy           | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
-| Light Navy     | ![#112240](https://via.placeholder.com/10/0a192f?text=+) `#112240` |
-| Lightest Navy  | ![#233554](https://via.placeholder.com/10/303C55?text=+) `#233554` |
-| Slate          | ![#8892b0](https://via.placeholder.com/10/8892b0?text=+) `#8892b0` |
-| Light Slate    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
-| Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
-| White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
-| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
+## 📁 Project Structure
+
+```
+├── content/                 # Markdown content
+│   ├── featured/           # Featured projects
+│   ├── jobs/               # Work experience
+│   ├── posts/              # Blog posts
+│   └── projects/           # Other projects
+├── src/
+│   ├── components/         # React components
+│   ├── hooks/              # Custom React hooks
+│   ├── images/             # Image assets
+│   ├── pages/              # Gatsby pages
+│   ├── styles/             # Global styles and theme
+│   ├── templates/          # Page templates
+│   └── utils/              # Utility functions
+├── static/                 # Static assets
+├── gatsby-config.js        # Gatsby configuration
+├── gatsby-node.js          # Gatsby Node APIs
+└── package.json           # Dependencies and scripts
+```
+
+## ⚙️ Configuration
+
+### Site Metadata
+
+Edit `gatsby-config.js` to update site information:
+
+```javascript
+siteMetadata: {
+  title: 'Your Name',
+  description: 'Your description',
+  siteUrl: 'https://yourwebsite.com',
+  // ...
+}
+```
+
+### Personal Information
+
+Update `src/config.js` with your personal details:
+
+```javascript
+module.exports = {
+  email: 'your.email@gmail.com',
+  socialMedia: [
+    // Your social media links
+  ],
+  navLinks: [
+    // Navigation links
+  ],
+  // ...
+};
+```
+
+## 🎨 Customization
+
+### Colors and Theme
+
+- Edit `src/styles/theme.js` to customize colors, fonts, and design tokens
+- Dark mode is supported by default with automatic system preference detection
+
+### Content Management
+
+- **About Section**: Edit `src/components/sections/about.js`
+- **Work Experience**: Add/edit markdown files in `content/jobs/`
+- **Featured Projects**: Add/edit markdown files in `content/featured/`
+- **All Projects**: Add/edit markdown files in `content/projects/`
+- **Blog Posts**: Add/edit markdown files in `content/posts/`
+
+### Images and Assets
+
+- **Profile Picture**: Replace `src/images/me.jpg`
+- **Favicon**: Replace files in `src/images/favicons/`
+- **Resume**: Replace `static/resume.pdf`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Original design inspiration and code structure
+- Gatsby.js community and documentation
+- React and styled-components communities

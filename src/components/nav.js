@@ -93,6 +93,8 @@ const StyledNav = styled.nav`
           }
           polygon {
             fill: var(--navy);
+            stroke: var(--green);
+            stroke-width: 2;
           }
         }
       }
