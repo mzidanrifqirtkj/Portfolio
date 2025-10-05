@@ -1,7 +1,7 @@
 ---
 date: '2024-02-01'
 title: 'Full Stack Developer (MSIB Kampus Merdeka Program)'
-company: 'IST AKPRIND Yogyakarta'
+company: 'Universitas AKPRIND Indonesia'
 location: 'Yogyakarta, Indonesia'
 range: 'February 2024 – June 2024'
 url: https://akprind.ac.id/
