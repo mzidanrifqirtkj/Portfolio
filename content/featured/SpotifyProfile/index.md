@@ -1,15 +1,15 @@
 ---
 date: '2'
-title: 'Spotify Profile'
+title: 'Information System for Multi-Type Payments'
 cover: './demo.png'
-github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+github: ''
+external: ''
 tech:
-  - React
-  - Styled Components
-  - Express
-  - Spotify API
-  - Heroku
+  - Laravel
+  - Bootstrap
+  - JavaScript
+  - MySQL
+  - Spatie
 ---
 
-A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+An Information System for Multi-Type Payments developed to streamline financial transactions and reporting for internal administration at Al-Luqmaniyyah. Built with Laravel framework, integrating Breeze for authentication and Spatie for comprehensive role and permission management. Features a responsive and user-friendly interface using Bootstrap and JavaScript, with optimized MySQL database for improved data accuracy and query performance.

@@ -1,15 +1,15 @@
 ---
 date: '1'
-title: 'Halcyon Theme'
-cover: './halcyon.png'
-github: 'https://github.com/bchiang7/halcyon-site'
-external: 'https://halcyon-theme.netlify.com/'
+title: 'CMS'
+cover: './visindo.png'
+github: ''
+external: ''
 tech:
-  - VS Code
-  - Sublime Text
-  - Atom
-  - iTerm2
-  - Hyper
+  - Laravel
+  - React
+  - Inertia.js
+  - Tailwind CSS
+  - MySQL
 ---
 
-A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode), [Package Control](https://packagecontrol.io/packages/Halcyon%20Theme), [Atom Package Manager](https://atom.io/themes/halcyon-syntax), and [npm](https://www.npmjs.com/package/hyper-halcyon-theme).
+A web-based documentation system for a heavy equipment distribution company designed to streamline operational workflows and data tracking. Built with scalable and secure backend architecture using Laravel, Breeze, and Spatie for authentication and role management. Features interactive and responsive user interfaces powered by React, Inertia.js, shadcn/ui, and Tailwind CSS, with optimized database design using MySQL for efficient data storage and retrieval.
