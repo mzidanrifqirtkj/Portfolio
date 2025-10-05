@@ -67,8 +67,12 @@ const Hero = () => {
       <p>
         I'm a <span style={{ color: 'var(--green)' }}>Full-Stack Developer</span> specializing in
         building web applications with <span style={{ color: 'var(--green)' }}>Laravel</span>,{' '}
-        <span style={{ color: 'var(--green)' }}>React</span>, and modern front-end tools. I focus on
-        creating <span style={{ color: 'var(--green)' }}>scalable</span>, user-friendly, and
+        <span style={{ color: 'var(--green)' }}>React</span>,{' '}
+        <span style={{ color: 'var(--green)' }}>Node.js</span>,{' '}
+        <span style={{ color: 'var(--green)' }}>Bootstrap</span>,{' '}
+        <span style={{ color: 'var(--green)' }}>Tailwind</span>,{' '}
+        <span style={{ color: 'var(--green)' }}>Golang</span>, and modern front-end tools. I focus
+        on creating <span style={{ color: 'var(--green)' }}>scalable</span>, user-friendly, and
         efficient systems, from authentication to data management. Currently, I'm working on{' '}
         <span style={{ color: 'var(--green)' }}>freelance projects</span> and continuously improving
         my skills to deliver reliable, human-centered digital solutions.
