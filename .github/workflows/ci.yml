@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     
+    permissions:
+      contents: read
+    
     strategy:
       matrix:
         node-version: [18.x, 20.x]
