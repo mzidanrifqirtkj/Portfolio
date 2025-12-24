@@ -32,12 +32,18 @@ jobs:
       - name: Get changed files
         id: changed-files
         run: |
-          echo "files=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.(js|jsx)$' | xargs)" >> $GITHUB_OUTPUT
+          CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.(js|jsx)$' | xargs -r echo || echo "")
+          echo "files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+          if [ -n "$CHANGED_FILES" ]; then
+            echo "has_files=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_files=false" >> $GITHUB_OUTPUT
+          fi
       
       - name: Run ESLint on changed files
-        if: steps.changed-files.outputs.files
+        if: steps.changed-files.outputs.has_files == 'true'
         run: npx eslint ${{ steps.changed-files.outputs.files }}
       
       - name: Run Prettier on changed files
-        if: steps.changed-files.outputs.files
+        if: steps.changed-files.outputs.has_files == 'true'
         run: npx prettier --check ${{ steps.changed-files.outputs.files }}

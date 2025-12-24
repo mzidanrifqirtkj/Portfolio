@@ -229,7 +229,9 @@ Weekly security audit of dependencies.
 #### 4. **Code Quality** (`.github/workflows/code-quality.yml`)
 Runs on pull requests to ensure code quality.
 
-- **Checks**: Runs lint-staged for staged files
+- **Checks**:
+  - ESLint on changed JavaScript/JSX files
+  - Prettier formatting on changed JavaScript/JSX files
 
 ### Setting Up Vercel Deployment
 
