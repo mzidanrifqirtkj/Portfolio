@@ -9,8 +9,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  lint-staged:
-    name: Lint Staged Files
+  code-quality:
+    name: Code Quality Check
     runs-on: ubuntu-latest
     timeout-minutes: 10
     
@@ -29,5 +29,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Run lint-staged
-        run: npm run lint-staged
+      - name: Get changed files
+        id: changed-files
+        run: |
+          echo "files=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.(js|jsx)$' | xargs)" >> $GITHUB_OUTPUT
+      
+      - name: Run ESLint on changed files
+        if: steps.changed-files.outputs.files
+        run: npx eslint ${{ steps.changed-files.outputs.files }}
+      
+      - name: Run Prettier on changed files
+        if: steps.changed-files.outputs.files
+        run: npx prettier --check ${{ steps.changed-files.outputs.files }}
