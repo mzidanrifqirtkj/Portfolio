@@ -49,7 +49,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: node.frontmatter.slug,
       component: postTemplate,
       context: {
-        path: node.frontmatter.slug,
+        slug: node.frontmatter.slug,
       },
     });
   });
