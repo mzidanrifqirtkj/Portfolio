@@ -11,6 +11,15 @@
   <strong>✨ Updated to latest technologies for Node.js v20+ compatibility</strong>
 </p>
 
+<p align="center">
+  <a href="https://github.com/mzidanrifqirtkj/Portfolio/actions/workflows/ci.yml">
+    <img src="https://github.com/mzidanrifqirtkj/Portfolio/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
+  </a>
+  <a href="https://github.com/mzidanrifqirtkj/Portfolio/actions/workflows/deploy-vercel.yml">
+    <img src="https://github.com/mzidanrifqirtkj/Portfolio/actions/workflows/deploy-vercel.yml/badge.svg" alt="Vercel Deployment" />
+  </a>
+</p>
+
 ![demo](https://raw.githubusercontent.com/bchiang7/v4/main/src/images/demo.png)
 
 ## � Tech Stack
@@ -185,6 +194,87 @@ module.exports = {
 - **Profile Picture**: Replace `src/images/me.jpg`
 - **Favicon**: Replace files in `src/images/favicons/`
 - **Resume**: Replace `static/resume.pdf`
+
+## 🚀 CI/CD and Deployment
+
+This project includes automated CI/CD workflows powered by GitHub Actions and deployment to Vercel.
+
+### GitHub Actions Workflows
+
+#### 1. **CI Workflow** (`.github/workflows/ci.yml`)
+Runs on every push and pull request to `main` and `develop` branches.
+
+- **Tests on**: Node.js 18.x and 20.x
+- **Checks**:
+  - ESLint code linting
+  - Prettier code formatting
+  - Gatsby production build
+- **Artifacts**: Uploads build artifacts for Node 18.x
+
+#### 2. **Vercel Deployment** (`.github/workflows/deploy-vercel.yml`)
+Automatically deploys to Vercel.
+
+- **Production**: Deploys to production on push to `main` branch
+- **Preview**: Creates preview deployments for pull requests
+- **Manual**: Can be triggered manually via workflow dispatch
+
+#### 3. **Dependency Check** (`.github/workflows/dependency-check.yml`)
+Weekly security audit of dependencies.
+
+- **Schedule**: Runs every Sunday at midnight UTC
+- **Checks**:
+  - npm security audit (moderate level)
+  - Outdated packages check
+
+#### 4. **Code Quality** (`.github/workflows/code-quality.yml`)
+Runs on pull requests to ensure code quality.
+
+- **Checks**:
+  - ESLint on changed JavaScript/JSX files
+  - Prettier formatting on changed JavaScript/JSX files
+
+### Setting Up Vercel Deployment
+
+To enable automatic deployments to Vercel, you need to configure the following secrets in your GitHub repository settings:
+
+1. Go to your repository **Settings → Secrets and variables → Actions**
+2. Add the following secrets:
+
+| Secret Name | Description | How to Get |
+|-------------|-------------|------------|
+| `VERCEL_TOKEN` | Personal Access Token from Vercel | Create at [Vercel Account Settings → Tokens](https://vercel.com/account/tokens) |
+| `VERCEL_ORG_ID` | Your Vercel Organization ID | Run `vercel link` in your project and find in `.vercel/project.json` |
+| `VERCEL_PROJECT_ID` | Your Vercel Project ID | Run `vercel link` in your project and find in `.vercel/project.json` |
+
+#### Getting Your Vercel IDs
+
+```sh
+# Install Vercel CLI
+npm install -g vercel
+
+# Link your project to Vercel
+vercel link
+
+# Your IDs will be saved in .vercel/project.json
+cat .vercel/project.json
+```
+
+**Note**: The `.vercel` directory is gitignored, so your IDs won't be committed to the repository.
+
+### Manual Deployment to Vercel
+
+You can also deploy manually using the Vercel CLI:
+
+```sh
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Deploy to preview
+vercel
+
+# Deploy to production
+vercel --prod
+```
 
 ## 🤝 Contributing
 
